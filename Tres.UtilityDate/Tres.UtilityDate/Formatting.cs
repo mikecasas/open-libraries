@@ -11,20 +11,32 @@ namespace Tres.UtilityDate
         //    Money
         //}
 
-        //public static string ProperCase(this int i, FormatStyle formatStyle)
-        //{
-        //    switch (formatStyle)
-        //    {
-        //        case FormatStyle.CommasNoDecimals:
-        //            return string.Format("{0:#,###;(#,###);-;}", i);
-        //            break;
-        //        case FormatStyle.Money:
-        //            return "sdfdfs";
-        //            break;
-        //        default:
-        //            return "sdfdfs";
-        //            break;
-        //    }         
-        //}
+        public static string DateDashed(this DateTime i)
+        {
+            var d = i.Day;
+            var m = i.Month;
+            string dd;
+            string mm;
+
+            if (d < 10)
+            {
+                dd = $"0{d}";
+            }
+            else
+            {
+                dd = $"{d}";
+            }
+
+            if (m < 10)
+            {
+                mm = $"0{m}";
+            }
+            else
+            {
+                mm = $"{m}";
+            }
+
+            return $"{i.Year}-{mm}-{dd}";
+        }
     }
 }
