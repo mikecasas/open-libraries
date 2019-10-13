@@ -42,17 +42,17 @@ namespace Tres.Emailer
             return m;
         }
 
-        internal static void SendEmailToGoogleServer(MimeMessage message)
+        internal static void SendEmailToGoogleServer(MimeMessage message, UserCredentials user)
         {                     
-            SendSmtpEmailToServer(message, Config.GoogleSmtp());
+            SendSmtpEmailToServer(message, Config.GoogleSmtp(),user);
         }
 
-        internal static IEnumerable<MimeMessage> GetEmailFromGoogleServer()
+        internal static IEnumerable<MimeMessage> GetEmailFromGoogleServer(UserCredentials user)
         {
-            return GetEmailFromInBox(Config.ImapServer());
+            return GetEmailFromInBox(Config.ImapServer(), user);
         }
 
-        private static void SendSmtpEmailToServer(MimeMessage message, MailServiceConnectionConfig config)
+        private static void SendSmtpEmailToServer(MimeMessage message, MailServiceConnectionConfig config, UserCredentials user)
         {
             using (var client = new SmtpClient())
             {
@@ -63,14 +63,14 @@ namespace Tres.Emailer
                 client.AuthenticationMechanisms.Remove("XOAUTH2");
 
                 // Note: only needed if the SMTP server requires authentication
-                client.Authenticate(Config.EmailBox, Config.Pw);
+                client.Authenticate(user.UserName, user.Password);
 
                 client.Send(message);
                 client.Disconnect(true);
             }
         }
                
-        private static IEnumerable<MimeMessage> GetEmailFromInBox(MailServiceConnectionConfig config)
+        private static IEnumerable<MimeMessage> GetEmailFromInBox(MailServiceConnectionConfig config, UserCredentials user)
         {        
             var mail = new List<MimeMessage>();
 
@@ -80,7 +80,7 @@ namespace Tres.Emailer
                 client.ServerCertificateValidationCallback = (s, c, h, e) => true;
 
                 client.Connect(config.Host, config.Port,config.UseSsl);
-                client.Authenticate(Config.EmailBox, Config.Pw);
+                client.Authenticate(user.UserName, user.Password);
 
                 // The Inbox folder is always available on all IMAP servers...
                 var inbox = client.Inbox;
