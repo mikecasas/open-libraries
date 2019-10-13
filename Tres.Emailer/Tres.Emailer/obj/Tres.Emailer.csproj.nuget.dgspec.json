@@ -1,34 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "D:\\open-libraries\\Tres.Emailer\\Tres.Emailer\\Tres.Emailer.csproj": {}
+    "C:\\Users\\mc\\source\\open-libraries\\Tres.Emailer\\Tres.Emailer\\Tres.Emailer.csproj": {}
   },
   "projects": {
-    "D:\\open-libraries\\Tres.Emailer\\Tres.Emailer\\Tres.Emailer.csproj": {
+    "C:\\Users\\mc\\source\\open-libraries\\Tres.Emailer\\Tres.Emailer\\Tres.Emailer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\open-libraries\\Tres.Emailer\\Tres.Emailer\\Tres.Emailer.csproj",
+        "projectUniqueName": "C:\\Users\\mc\\source\\open-libraries\\Tres.Emailer\\Tres.Emailer\\Tres.Emailer.csproj",
         "projectName": "Tres.Emailer",
-        "projectPath": "D:\\open-libraries\\Tres.Emailer\\Tres.Emailer\\Tres.Emailer.csproj",
-        "packagesPath": "C:\\Users\\mcasas\\.nuget\\packages\\",
-        "outputPath": "D:\\open-libraries\\Tres.Emailer\\Tres.Emailer\\obj\\",
+        "projectPath": "C:\\Users\\mc\\source\\open-libraries\\Tres.Emailer\\Tres.Emailer\\Tres.Emailer.csproj",
+        "packagesPath": "C:\\Users\\mc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mc\\source\\open-libraries\\Tres.Emailer\\Tres.Emailer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\mcasas\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\mc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "H:\\nuget-net-standard": {},
-          "H:\\nuget-orchard-modules": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
