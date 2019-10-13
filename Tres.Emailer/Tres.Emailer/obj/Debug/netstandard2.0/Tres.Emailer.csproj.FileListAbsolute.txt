@@ -1,5 +1,0 @@
-D:\open-libraries\Tres.Emailer\Tres.Emailer\bin\Debug\netstandard2.0\Tres.Emailer.deps.json
-D:\open-libraries\Tres.Emailer\Tres.Emailer\bin\Debug\netstandard2.0\Tres.Emailer.dll
-D:\open-libraries\Tres.Emailer\Tres.Emailer\obj\Debug\netstandard2.0\Tres.Emailer.csprojAssemblyReference.cache
-D:\open-libraries\Tres.Emailer\Tres.Emailer\obj\Debug\netstandard2.0\Tres.Emailer.AssemblyInfoInputs.cache
-D:\open-libraries\Tres.Emailer\Tres.Emailer\obj\Debug\netstandard2.0\Tres.Emailer.AssemblyInfo.cs
