@@ -9,9 +9,9 @@ using Tres.Emailer.Models;
 
 namespace Tres.Emailer
 {
-    class Utils
+    public class Utils
     {
-        internal static MimeMessage CreateMessage(string subject, string body, IEnumerable<MailboxAddress> toMailboxes, 
+        public static MimeMessage CreateMessage(string subject, string body, IEnumerable<MailboxAddress> toMailboxes, 
             MailboxAddress fromAddress)
         {
             var m = new MimeMessage();
@@ -42,7 +42,7 @@ namespace Tres.Emailer
             return m;
         }
 
-        internal static void SendEmailToGoogleServer(MimeMessage message, UserCredentials user)
+        public static void SendEmailToGoogleServer(MimeMessage message, UserCredentials user)
         {                     
             SendSmtpEmailToServer(message, Config.GoogleSmtp(),user);
         }
